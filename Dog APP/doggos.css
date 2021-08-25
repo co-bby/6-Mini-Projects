@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav-bar{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction:row;
+	background-color:#444;
+	justify-content: space-between;
+	padding: 40px;
+}
+.doggos {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+
+
+}
+.doggos .dog-img{
+width: 100vw;	
+}
