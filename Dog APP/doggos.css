@@ -9,6 +9,7 @@
 	background-color:#444;
 	justify-content: space-between;
 	padding: 40px;
+	color:#fff;
 }
 .doggos {
 	position: relative;
@@ -20,4 +21,23 @@
 }
 .doggos .dog-img{
 width: 100vw;	
+}
+@keyframes spin {
+	to{
+		transform: rotateZ(340deg)
+	}
+	
+} 
+.spinner {
+	font-size:50px;
+	text-align: center;
+	animation: 2s spin linear;
+	display:none;
+
+}
+.dog-img{
+	display:none;
+}
+.show{
+	display:block;
 }
