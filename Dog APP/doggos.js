@@ -17,6 +17,7 @@
 
 const breeds ="https://dog.ceo/api/breeds/list/all";
 const select = document.querySelector(".breeds");
+const spinner = document.querySelector('.spinner');
 
 fetch(breeds)
 .then(function(response){ 
@@ -36,6 +37,8 @@ fetch(breeds)
 select.addEventListener('change', function(e){
 	let url = `https://dog.ceo/api/breed/${e.target.value}/images/random`;
 	const dogImg= document.querySelector(".dog-img");
+	spinner.classList.add('show');
+	dogImg.classList.remove('show');
 	fetch(url)
 	 .then(function(response){
 		 return response.json();
@@ -43,4 +46,7 @@ select.addEventListener('change', function(e){
 	 .then(function(data){
 		 dogImg.src=data.message; 
 	 })
-})
+	 spinner.classList.remove('show');
+	 dogImg.classList.add('show');
+
+	}); 
